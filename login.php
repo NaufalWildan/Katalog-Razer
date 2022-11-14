@@ -10,10 +10,19 @@
             echo" 
             <script>
                 alert('Selamat datang $username');
+                document.location.href='home.php';
+            </script>
+            ";
+        } 
+        elseif($user=== 'admin' and $password === 'admin'){
+            echo" 
+            <script>
+                alert('Selamat datang $username');
                 document.location.href='index.php';
             </script>
             ";
-        } else{
+        }
+        else{
             echo" 
             <script>
                 alert('Username dan Pasword salah');
@@ -47,6 +56,9 @@
 
             <p>Belum punya akun?
                 <a href="register.php">Register</a>
+            </p>
+            <p>Admin
+                <a href="LoginAdmin.php">Register</a>
             </p>
         </div>
     </div>

@@ -1,3 +1,27 @@
+<?php
+  require "config.php";
+
+  if(isset($_POST['submit'])){
+    $saran = $_POST['saran'];
+    
+
+    
+    
+          $query = mysqli_query($db,"INSERT INTO dbsaran (saran) VALUES ('$saran')");
+          if($query){
+            echo '<script language = "javascript">
+            alert("Data Berhasil Di Input") ;document.location = "saran.php";</script>';    
+        }
+        else{
+            echo '<script language = "javascript">
+            alert("Data Gagal Di Input") </script>';    
+        }
+
+    
+  }
+  
+?> 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +29,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Razer Indonesia</title>
-    <link rel="stylesheet" href="stylesheet/stylesheet.css">
-    <script src="js/setting.js"></script>
+    <link rel="stylesheet" href="stylesheet/stylesheet.css?v8">
     
 </head>
 <body>
@@ -26,12 +49,10 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="login.php" class="active">Laptops</a></li>
-                            <li><a href="login.php">Monitors</a></li>
-                            <li><a href="login.php">Keyboards</a></li>
-                            <li><a href="login.php">Headsets</a></li>
-                            <li><a href="aboutme.php">About Me</a></li>
-                            <li><a href="login.php">Login</a></li>
+                            <li><a href="home.php" class="active">Home</a></li>
+                            <li><a href="saran.php">Saran</a></li>
+                            <li><a href="katalog.php">Katalog</a></li>
+                            <li><a href="index.html">Logout</a></li>
                             <li><input class="toggle" type="checkbox" onclick="myFunctionn()"/></li>
                         </ul>        
                         
@@ -51,26 +72,39 @@
                 <div class="col-lg-6">
                     <div class="left-content">
                         <div class="thumb">
-                            <div class="inner-content">
-                                <div>
-                                    <h4 id="weare">We Are Razer<h4>
-                                </div>
-                                
-                                <span>The Ultimate Performance For Gaming</span>
-                                <div class="main-border-button">
-                                    <button id="myBtn">Info...</button>
 
-                                    <script>
-                                    document.getElementById("myBtn").addEventListener("click", myFunction);
-
-                                    function myFunction() {
-                                        alert ("Razer Inc. adalah sebuah perusahaan produsen perangkat keras permainan global yang didirikan pada tahun 2005 oleh wirausahawan Singapura Min-Liang Tan dan Robert Krakoff");
-                                    }
-                                    </script>
-                                </div>
+                        <table>
+                            <tr>
+                                <th>Saran & Ulasan</th>
                                 
-                            </div>
-                            <img src="razer.jpg" alt="" width="100px" height="900px">
+                            </tr>
+                            
+                            <?php 
+                                include "config.php";
+                                    $query= "SELECT * FROM dbsaran";
+                                
+
+
+                                $read = mysqli_query($db, $query);
+                                while($row = mysqli_fetch_assoc($read)){
+                            ?>
+                            <tr>
+                                <th><?php echo $row['saran'] ?></th>
+                                
+                            </tr>
+                            <?php } ?>
+                            </table>
+
+                        <form action="" method="post" enctype="multipart/form-data">
+
+                        <label for="">Masukkan Saran Anda...</label><br>
+                        <input type="text" name="saran" class="form-text"><br>
+
+                        <input type="submit" name="submit" value="Kirim" class="btn-submit">
+
+                        
+
+                    </form>
                         </div>
                     </div>
                 </div>
@@ -78,6 +112,7 @@
             </div>
         </div>
     </div>
+    
     <!-- ***** Main Banner Area End ***** -->
     
     <!-- ***** Footer Start ***** -->

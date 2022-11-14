@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Razer Indonesia</title>
-    <link rel="stylesheet" href="stylesheet/stylesheet.css">
+    <link rel="stylesheet" href="stylesheet/stylesheet.css?v2">
     <script src="js/setting.js"></script>
     
 </head>
@@ -26,12 +26,10 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="login.php" class="active">Laptops</a></li>
-                            <li><a href="login.php">Monitors</a></li>
-                            <li><a href="login.php">Keyboards</a></li>
-                            <li><a href="login.php">Headsets</a></li>
-                            <li><a href="aboutme.php">About Me</a></li>
-                            <li><a href="login.php">Login</a></li>
+                            <li><a href="home.php" class="active">Home</a></li>
+                            <li><a href="saran.php">Saran</a></li>
+                            <li><a href="katalog.php">Katalog</a></li>
+                            <li><a href="index.html">Logout</a></li>
                             <li><input class="toggle" type="checkbox" onclick="myFunctionn()"/></li>
                         </ul>        
                         
