@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Razer Indonesia</title>
-    <link rel="stylesheet" href="stylesheet/stylesheet.css">
+    <link rel="stylesheet" href="stylesheet/stylesheet.css?3">
     <script src="js/setting.js"></script>
     
 </head>
@@ -20,19 +20,47 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.php" class="logo">
+                        <a href="login.php" class="logo">
                             <img src="logo.png">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="login.php" class="active">Laptops</a></li>
-                            <li><a href="login.php">Monitors</a></li>
-                            <li><a href="login.php">Keyboards</a></li>
-                            <li><a href="login.php">Headsets</a></li>
-                            <li><a href="aboutme.php">About Me</a></li>
+                            <li><a id="login1">Laptops</a></li>
+                            <li><a id="login2">Monitors</a></li>
+                            <li><a id="login3">Keyboards</a></li>
+                            <li><a id="login4">Headsets</a></li>
+                            <li><a href="aboutme.php">About Us</a></li>
                             <li><a href="login.php">Login</a></li>
                             <li><input class="toggle" type="checkbox" onclick="myFunctionn()"/></li>
+                            <script>
+                                document.getElementById("login1").addEventListener("click", myFunction);
+
+                                function myFunction() {
+                                    alert ("Silahkan Login!!!");
+                                }
+                            </script>
+                            <script>
+                                document.getElementById("login2").addEventListener("click", myFunction);
+
+                                function myFunction() {
+                                    alert ("Silahkan Login!!!");
+                                }
+                            </script>
+                            <script>
+                                document.getElementById("login3").addEventListener("click", myFunction);
+
+                                function myFunction() {
+                                    alert ("Silahkan Login!!!");
+                                }
+                            </script>
+                            <script>
+                                document.getElementById("login4").addEventListener("click", myFunction);
+
+                                function myFunction() {
+                                    alert ("Silahkan Login!!!");
+                                }
+                            </script>
                         </ul>        
                         
                         <!-- ***** Menu End ***** -->
@@ -89,9 +117,9 @@
                     <div class="under-footer">
                         <p>Copyright © 2022 Razer Inc. All rights reserved. 
                             <ul >
-                                <li><a href="#About" class="active">About Us</a></li>
-                                <li><a href="#Site">Site Map</a></li>
-                                <li><a href="#Contact">Contact Us</a></li>
+                                <li><a href="aboutme.php" class="active">About Us</a></li>
+                                <li><a href="aboutme.php">Site Map</a></li>
+                                <li><a href="aboutme.php">Contact Us</a></li>
                             </ul>
                         
                     </p>

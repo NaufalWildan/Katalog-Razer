@@ -29,7 +29,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Razer Indonesia</title>
-    <link rel="stylesheet" href="stylesheet/stylesheet.css?v8">
+    <link rel="stylesheet" href="stylesheet/saran.css?v8">
     
 </head>
 <body>
@@ -124,9 +124,9 @@
                     <div class="under-footer">
                         <p>Copyright © 2022 Razer Inc. All rights reserved. 
                             <ul >
-                                <li><a href="#About" class="active">About Us</a></li>
-                                <li><a href="#Site">Site Map</a></li>
-                                <li><a href="#Contact">Contact Us</a></li>
+                                <li><a href="aboutme.php" class="active">About Us</a></li>
+                                <li><a href="aboutme.php">Site Map</a></li>
+                                <li><a href="aboutme.php">Contact Us</a></li>
                             </ul>
                         
                     </p>
