@@ -19,7 +19,7 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.php" class="logo">
+                        <a href="home.php" class="logo">
                             <img src="logo.png">
                         </a>
                         <!-- ***** Logo End ***** -->
